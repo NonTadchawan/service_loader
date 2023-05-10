@@ -9,6 +9,7 @@ public class Farmer {
     public Pet breedPet(){
         ServiceLoader<Pet> service = ServiceLoader.load(Pet.class);
         Optional<Pet> first = service.findFirst();
-        return first.get();
+        Pet pet=first.get();
+        return pet;
     }
 }
